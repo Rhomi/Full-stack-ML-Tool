@@ -4,9 +4,10 @@
 The application runs Machine Learning models on your dataset of choice. The current implementation uses an ANN model built on Keras 
 
 ### Instructions to Install Docker.
-#### On Windows
+Link - https://docs.docker.com/toolbox/overview/
 
-Make the following changes. 
+#### On Windows
+Make the following changes after installation. 
 
 Step 1:
 Go to C:\Program Files\Docker Toolbox\start.sh
@@ -20,8 +21,7 @@ If necessary, some Windows firewall settings need to be changed - > Please follo
 https://youtu.be/ymlWt1MqURY
 
 #### On Mac/Linux
-The default settings seem to suffice. 
-
+The default settings seem to suffice or kindly follow the instructions specified on the page. 
 
 ### Run the application 
 
@@ -30,6 +30,6 @@ The default settings seem to suffice.
 3. Build the application by saying "docker-compose up --build"
 4. After the build is complete, the application will be up and running on the localhost http://0.0.0.0:4000/
 5. Open another docker terminal and cd to the cloned repo.
-6. Run the bash file by saying "docker exec "container-name" sh calls.sh" Eg: docker exec fullstackmltool_web_dev_1 cat calls.sh
-7. On OSX/Linux run "container-name" cat calls_x.sh
+6. On Windows -> Run the bash file by saying "docker exec "container-name" sh calls.sh" Eg: docker exec fullstackmltool_web_dev_1 cat calls.sh
+7. On OSX/Linux -> run "container-name" cat calls_x.sh
 
