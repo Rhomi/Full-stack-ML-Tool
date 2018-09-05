@@ -1,7 +1,7 @@
 
 ### ML Tool Using Flask+Mongo+Docker
 
-The application runs Machine Learning models on your dataset of choice. The current implementation uses an ANN model built on Keras 
+The application runs Machine Learning models on your dataset of choice. We can create ML experiments on the tool to record each experiment we run on the dataset. The current implementation uses an ANN model built on Keras and more models will be added in the coming iterations.
 
 ### Instructions to Install Docker.
 Link - https://docs.docker.com/toolbox/overview/
@@ -32,4 +32,19 @@ The default settings seem to suffice or kindly follow the instructions specified
 5. Open another docker terminal and cd to the cloned repo.
 6. On Windows -> Run the bash file by saying "docker exec "container-name" sh calls.sh" Eg: docker exec fullstackmltool_web_dev_1 cat calls.sh
 7. On OSX/Linux -> run "container-name" cat calls_x.sh
+
+
+#### Steps to Add/Update Experiments
+
+The following curl calls can be executed from a terminal while the application is up and running. 
+
+Note - The name of the experiments are assumed to be "unique".
+
+CREATE ==> curl localhost:4000/experiments -d "{\"exp_name\": \"name of the experiment\", \"train_split\":\"percentage of data used for train\", \"type\":\"type of the experiment\"}" -H "Content-Type: application/json"
+
+READ ==> curl localhost:4000/experiments
+
+DELETE ==> curl -X DELETE localhost:4000/experiments -d "{\"exp_name\":\"name of the experiment\"}" -H "Content-Type: application/json"
+
+UPDATE ==> curl -X PATCH localhost:4000/experiments -d "{\"query\": {\"exp_name\":\"name of the experiment\"}, \"payload\" : {\"field to be updated/added\":\"new value to be updated/added\"}}" -H "Content-Type: application/json"
 
