@@ -30,8 +30,8 @@ The default settings seem to suffice or kindly follow the instructions specified
 3. Build the application by saying "docker-compose up --build"
 4. After the build is complete, the application will be up and running on the localhost http://0.0.0.0:4000/
 5. Open another docker terminal and cd to the cloned repo.
-6. On Windows -> Run the bash file by saying "docker exec "container-name" sh calls.sh" Eg: docker exec fullstackmltool_web_dev_1 cat calls.sh
-7. On OSX/Linux -> run "container-name" cat calls_x.sh
+6. On Windows -> Run the bash file by saying "docker exec "container-name" sh calls.sh" Eg: docker exec fullstackmltool_web_dev_1 sh calls.sh
+7. On OSX/Linux -> run "container-name" sh calls_x.sh
 
 
 #### Steps to Add/Update Experiments
