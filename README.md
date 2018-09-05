@@ -48,3 +48,7 @@ DELETE ==> curl -X DELETE localhost:4000/experiments -d "{\"exp_name\":\"name of
 
 UPDATE ==> curl -X PATCH localhost:4000/experiments -d "{\"query\": {\"exp_name\":\"name of the experiment\"}, \"payload\" : {\"field to be updated/added\":\"new value to be updated/added\"}}" -H "Content-Type: application/json"
 
+#### Sample Output
+![image](https://user-images.githubusercontent.com/15122503/45110557-9f990980-b110-11e8-8bfe-620f4b2961d3.png)
+
+
